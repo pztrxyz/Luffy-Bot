@@ -2,9 +2,10 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const fs = require('fs');
 const config = require('./config.json');
-
+const queue = new Discord.Collection();
 const bot = new Discord.Client({disableEveryone:  true});
 
+bot.queue = queue;
 bot.events = new Discord.Collection();
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
