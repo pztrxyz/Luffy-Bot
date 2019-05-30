@@ -43,9 +43,9 @@ bot.on("message", async(msg) => {
       
               if (bot.aliases.has(command)) command = bot.commands.get(bot.aliases.get(command)).help.name
       
-              if (bot.commands.get(command).config.restricted == true) {
-                if (msg.author.id !== config.owner) return msg.channel.send('This Command For My Owner');
-              }
+              //if (bot.commands.get(command).config.restricted == true) {
+                //if (msg.author.id !== config.owner) return msg.channel.send('This Command For My Owner');
+              //}
               if (bot.commands.get(command).config.args == true) {
                   if (!args[0]) return msg.channel.send(`Invalid arguments. Use: ${config.prefix + 'help ' + bot.commands.get(command).help.name}`)
               }
