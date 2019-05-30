@@ -2,8 +2,8 @@ const { RichEmbed } = require('discord.js');
 
 exports.run = async(bot, msg, args) => {
     try {
-        let codein = args.join(" ");
-        let code = eval(codein);
+        let codein = args.join(" ")
+        let code = eval(codein)
 
         if (typeof code !== 'string')
             code = require('util').inspect(code, { depth: 0 });
