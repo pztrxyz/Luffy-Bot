@@ -32,4 +32,27 @@ fs.readdir("./events/", (err, files) => {
     delete require.cache[require.resolve(`./events/${file}`)];
   });
 });
+
+bot.on("message", async(msg) => {
+    try {
+        if (msg.author.bot) return;
+        if (msg.content.indexOf(config.prefix) !== 0) return;
+              const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
+              let command = args.shift().toLowerCase();
+      
+              if (bot.aliases.has(command)) command = bot.commands.get(bot.aliases.get(command)).help.name
+      
+              if (bot.commands.get(command).config.restricted == true) {
+                if (msg.author.id !== config.owner) return msg.channel.send('This Command For My Owner');
+              }
+              if (bot.commands.get(command).config.args == true) {
+                  if (!args[0]) return msg.channel.send(`Invalid arguments. Use: ${config.prefix + 'help ' + bot.commands.get(command).help.name}`)
+              }
+      
+              let commandFile = require(`./cmds/${command}.js`);
+              commandFile.run(bot, msg, args);
+      } catch (err) {
+        console.error(err)
+      }
+})
 bot.login()
