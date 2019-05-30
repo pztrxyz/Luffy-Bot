@@ -123,7 +123,8 @@ const youtube = new YouTube(process.env.GOOGLE_KEY);
 }
 
 exports.help = {
-    aliases: ["p"]
+    aliases: ["p"],
+    name: "play"
 }
 
 exports.config = {
