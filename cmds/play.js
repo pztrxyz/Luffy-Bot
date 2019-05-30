@@ -1,4 +1,4 @@
-exports.run = (bot, msg, args) => {
+exports.run = async(bot, msg, args) => {
     const searchString = args.join(' ');
 const url = args[0] ? args[0].replace(/<(.+)>/g, '$1') : '';
 const youtube = new YouTube(process.env.GOOGLE_KEY);
