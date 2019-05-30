@@ -25,5 +25,5 @@ exports.help = {
 exports.config = {
     args: true,
     restricted: false,
-    category: "Utility"
+    category: "Fun"
 }
