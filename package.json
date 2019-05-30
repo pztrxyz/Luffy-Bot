@@ -25,6 +25,10 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "dotenv": "^8.0.0",
-    "fs": "0.0.1-security"
+    "ffmpeg": "0.0.4",
+    "fs": "0.0.1-security",
+    "opusscript": "0.0.6",
+    "simple-youtube-api": "^5.1.1",
+    "ytdl-core": "^0.29.2"
   }
 }
