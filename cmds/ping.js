@@ -5,7 +5,7 @@ exports.run = (bot, msg, args) => {
     var api = bot.ping.toFixed(2);
 
     var embed = new RichEmbed()
-    .setAuthor(':ping_pong: Ping')
+    .setAuthor('Ping')
     .setColor('RANDOM')
     .addField(':speech_balloon: Latency', '`'+`${latency}ms` + '`')
     .addField(':signal_strength: API', '`'+`${api}ms`+'`')
