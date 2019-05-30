@@ -7,7 +7,7 @@ exports.run = async(bot, msg, args) => {
 
         if (typeof code !== 'string')
             code = require('util').inspect(code, { depth: 0 });
-        let embed = new Discord.RichEmbed()
+        let embed = new RichEmbed()
         .setAuthor('Eval')
         .setColor("RANDOM")
         .addField(':inbox_tray: Input', `\`\`\`js\n${codein}\`\`\``)
@@ -17,7 +17,7 @@ exports.run = async(bot, msg, args) => {
     } catch(e) {
       let codein = args.join(" ")
       let time = (Date.now() - msg.createdTimestamp).toLocaleString();
-      var embedd = new Discord.RichEmbed()
+      var embedd = new RichEmbed()
       .setAuthor('Error Occurred')
       .setColor('RED')
       .addField(':inbox_tray: Input', `\`\`\`js\n${codein}\`\`\``)
