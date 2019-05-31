@@ -11,7 +11,7 @@ exports.run = (bot, msg, args) => {
         }
     
     var embed = new RichEmbed()
-    .addField("Connected To", "```"+ `Users: ${bot.users.size} \n Servers: ${bot.guilds.size}`+"```")
+    .addField("Connected To", "```"+ `Users: ${bot.users.size} \nServers: ${bot.guilds.size} \nChannels: ${bot.channels.size}`+"```")
     .addField("Usage", "```"+`Uptime: ${moment(bot.uptime).format(" D [days] H [hours] S [Seconds]")} \nMemory: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB \nCpu: ${percent.toFixed(2)}%`+ "```")
     .addField(`System`, "```"+`CPU: ${os.cpus().map(i => `${i.model}`)[0]} \nArch: ${os.arch()} \nPLatform: ${os.platform()} \nNodejs: ${process.version} \nDiscord.js: v${version}`+"```") 
     msg.channel.send(embed);
