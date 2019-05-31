@@ -24,5 +24,6 @@ exports.help = {
 }
 
 exports.config = {
+    restricted: false,
     category: "Utility"
 }
