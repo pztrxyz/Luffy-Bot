@@ -36,6 +36,7 @@ fs.readdir("./events/", (err, files) => {
 });
 
 bot.on("message", async(msg) => {
+  const config = require('./config.json')
     try {
         if (msg.author.bot) return;
         if (msg.content.indexOf(config.prefix) !== 0) return;
