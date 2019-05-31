@@ -7,6 +7,7 @@ cpu.usagePercent(function(err, percent, seconds) {
     if (err) {
       return console.log(err);
     }
+})
 
 exports.run = (bot, msg, args) => {
     var embed = new RichEmbed()
