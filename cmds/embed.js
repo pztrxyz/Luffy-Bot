@@ -22,7 +22,7 @@ exports.help = {
     name: "embed"
 }
 
-exports.config = {
+exports.conf = {
     args: true,
     restricted: false,
     category: "Fun"

@@ -131,7 +131,7 @@ exports.help = {
     name: "play"
 }
 
-exports.config = {
+exports.conf = {
     args: true,
     restricted: false,
     category: "Music"

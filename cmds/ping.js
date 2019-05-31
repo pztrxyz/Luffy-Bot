@@ -22,7 +22,7 @@ exports.help = {
     description: "show ping of the client"
 }
 
-exports.config = {
+exports.conf = {
     args: false,
     restricted: false,
     category: "Utility"

@@ -33,7 +33,7 @@ exports.help = {
     name: "eval"
 }
 
-exports.config = {
+exports.conf = {
     args: true,
     restricted: true,
     category: "Devs"

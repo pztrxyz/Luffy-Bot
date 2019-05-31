@@ -8,7 +8,7 @@ exports.help = {
     name: "say"
 }
 
-exports.config = {
+exports.conf = {
     args: true,
     restricted: false,
     category: "Fun"

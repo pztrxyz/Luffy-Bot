@@ -23,7 +23,7 @@ exports.help = {
     name: "avatar"
 }
 
-exports.config = {
+exports.conf = {
     restricted: false,
     category: "Utility"
 }
