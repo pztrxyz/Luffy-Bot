@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const moment = require('moment');
 
 exports.run = (bot, msg, args) => {
-    var mention = msg.mentions.mentions.members.first() || msg.guild.members.get(args[0])
+    var mention = msg.mentions.members.first() || msg.guild.members.get(args[0])
     const type = {
         true: "Bot", false: "Human"
     }
