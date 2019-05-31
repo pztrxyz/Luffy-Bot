@@ -13,7 +13,7 @@ exports.run = (bot, msg, args) => {
         .setThumbnail(msg.author.displayAvatarURL)
         .addField(`General Information`, "```"+ `Tag: ${msg.author.tag} \nid: ${msg.author.id}, \ntype: ${type[msg.author.bot]} \ncreatedAt: ${moment(msg.author.createdTimestamp).format("YYYY - M - D [at] HH-mm-s")}`+ "```")
         .addField(`Status`, `Status: ${msg.author.presence.status} \nGame: ${msg.author.presence.game}`+ "```")
-        .addField(`Member Info`, `Joined At: ${moment(msg.member.joinedTimestamp).format("YYYY - M - D [at] HH-mm-s")} \nRoles: ${roles.size}` + "```")
+        .addField(`Member Info`, `Joined At: ${moment(msg.member.joinedTimestamp).format("YYYY - M - D [at] HH-mm-s")} \nRoles: ${msg.member.roles.size}` + "```")
         msg.channel.send(uembed)
 
     }
