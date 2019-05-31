@@ -3,13 +3,13 @@ const moment = require('moment');
 const os = require('os');
 const cpu = require('cpu-stat');
 
-cpu.usagePercent(function(err, percent, seconds) {
-    if (err) {
-      return console.log(err);
-    }
-})
 
 exports.run = (bot, msg, args) => {
+    cpu.usagePercent(function(err, percent, seconds) {
+        if (err) {
+          return console.log(err);
+        }
+    })
     var embed = new RichEmbed()
     .addField("Connected To", "```"+ `Users: ${bot.users.size} \n Servers: ${bot.guilds.size}`+"```")
     .addField("Usage", "```"+`Uptime: ${moment(bot.uptime).format(" D [days] H [hours] S [Seconds]")} \n Memory: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB \n Cpu: ${percent.toFixed(2)}%`+ "```")
