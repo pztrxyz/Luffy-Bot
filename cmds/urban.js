@@ -18,7 +18,7 @@ exports.run = async(bot, msg, args) => {
    		embed.addField('Tags', res.tags.join(', '), true) 
    		
    	};
-  message.channel.send(embed)
+  msg.channel.send(embed)
 }
 
 exports.help = {
