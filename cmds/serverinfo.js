@@ -14,8 +14,13 @@ exports.run = (bot, msg, args) => {
     .setAuthor(`Info Of ${msg.guild.name}`, msg.guild.displayIconURL)
     .setColor("RANDOM")
     .setThumbnail(msg.guild.iconURL)
-    .addField(`General Information`, "```"+ `ID: ${msg.guild.id} \nVerification Level: ${secure[msg.guild.verificationLevel]} \n Create At: ${moment(msg.guild.createdTimestamp).format("YYYY-mm-dd [at] HH:mm:ss")} \nRegion: ${msg.guild.region}` + "```")
-    .addField(`Channels & Members`, "```" + `Channels: ${msg.guild.channels.filter(ch => ch.type == "text").size} Text And ${msg.guild.channels.filter(c => c.type == "voice").size} Voice Channels \nMembers: ${msg.guild.memberCount} Total, ${msg.guild.members.filter(m => !m.user.bot).size} Users & ${msg.guild.members.filter(mm => mm.user.bot).size} Bots` + "```")
+    .addField(`General Information`, "```"+ `ID: ${msg.guild.id} \nVerification Level: ${secure[msg.guild.verificationLevel]} \nCreate At: ${moment(msg.guild.createdTimestamp).format("YYYY-M-D [at] HH:mm:ss")} \nRegion: ${msg.guild.region}` + "```")
+    .addField(`Channels`, "```" + `Text: ${msg.guild.channels.filter(ch => ch.type == "text").size} Channels \nVoice ${msg.guild.channels.filter(c => c.type == "voice").size} Channels ` + "```")
+    .addField(`Members`, "```" + `Members: ${msg.guild.memberCount} Total \nUsers:${msg.guild.members.filter(m => !m.user.bot).size} \nBots: ${msg.guild.members.filter(mm => mm.user.bot).size} Bots` + "```")
+    .addField(`Roles`, "```" + `Total: ${msg.guild.roles.size}, For List Of Roles, use command \`serverroles\``+ "```")
+    .addField(`Owner`, "```" + `Name: ${msg.guild.owner.user.tag} \nID: ${msg.guild.owner.id}` + "```")
+    .setTimestamp()
+    .setFooter(`Requested By ${msg.author.username}`, msg.author.displayAvatarURL)
     msg.channel.send(embed)
 }
 
