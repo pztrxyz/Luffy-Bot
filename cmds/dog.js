@@ -10,6 +10,7 @@ exports.run = (bot, msg, args) => {
         .setImage(url)
         .setTimestamp()
         .setFooter(`Requested By ${msg.author.username}`, msg.author.displayAvatarURL)
+        msg.channel.send(embed)
     })
 }
 
