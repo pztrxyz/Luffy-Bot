@@ -8,12 +8,16 @@ exports.run = (bot, msg, args) => {
         .setAuthor("Your Avatar", msg.author.displayAvatarURL)
         .setDescription(`[URL](${msg.author.avatarURL})`)
         .setImage(msg.author.displayAvatarURL)
+        .setTimestamp()
+        .setFooter(`Requested By ${msg.author.username}`, msg.author.displayAvatarURL)
         msg.channel.send(embed)
     } else {
         var userembed = new RichEmbed()
         .setAuthor(`${mention.username}'s Avatar`, mention.displayAvatarURL)
         .setDescription(`[URL](${mention.avatarURL})`)
         .setImage(mention.displayAvatarURL)
+        .setTimestamp()
+        .setFooter(`Requested By ${msg.author.username}`, msg.author.displayAvatarURL)
         msg.channel.send(userembed)
     }
 }
