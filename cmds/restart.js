@@ -6,7 +6,7 @@ exports.run = (bot, msg, args) => {
 }
 
 exports.help = {
-    aliases: "reboot",
+    aliases: ["reboot"],
     name: "restart"
 }
 
