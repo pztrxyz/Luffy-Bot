@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "11.x",
+    "node": "*",
     "npm": "*"
   },
   "scripts": {
@@ -16,12 +16,12 @@
     "url": "git+https://github.com/pztrxyz/Luffy-Bot.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "tr4sshy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pztrxyz/Luffy-Bot/issues"
   },
-  "homepage": "https://github.com/pztrxyz/Luffy-Bot#readme",
+  "homepage": "https://github.com/pztrxyz/Luffy-Bot",
   "dependencies": {
     "cpu-stat": "^2.0.1",
     "discord.js": "^11.5.1",

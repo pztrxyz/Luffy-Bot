@@ -9,6 +9,7 @@ exports.run = (bot, msg, args) => {
 
     if(!mention) {
         var uembed = new Discord.RichEmbed()
+        .setAuthor("RANDOM")
         .setAuthor(`Info Of ${msg.author.tag}`, msg.author.displayAvatarURL)
         .setThumbnail(msg.author.displayAvatarURL)
         .addField(`General Information`, "```"+ `Tag: ${msg.author.tag} \nid: ${msg.author.id}, \ntype: ${type[msg.author.bot]} \ncreatedAt: ${moment(msg.author.createdTimestamp).format("YYYY - M - D [at] HH:mm:s")}` + "```" + `\navatarURL: [CLICK ME](${msg.author.avatarURL}) \nMention: <@${msg.author.id}>`)
@@ -20,6 +21,7 @@ exports.run = (bot, msg, args) => {
 
     } else {
         var embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
         .setAuthor(`Info Of ${mention.user.tag}`, mention.user.displayAvatarURL)
         .setThumbnail(mention.user.displayAvatarURL)
         .addField(`General Information`, "```"+ `Tag: ${mention.user.tag} \nid: ${mention.id}, \ntype: ${type[mention.user.bot]} \ncreatedAt: ${moment(mention.user.createdTimestamp).format("YYYY - M - D [at] HH:mm:s")}` + "```" + `\navatarURL: [CLICK ME](${mention.user.avatarURL}) \nMention: <@${mention.id}>`)
