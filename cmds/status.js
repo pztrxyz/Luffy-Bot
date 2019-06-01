@@ -15,7 +15,7 @@ exports.run = (bot, msg, args) => {
     .addField("Usage", "```"+`Uptime: ${moment(bot.uptime).format(" D [days] H [hours] S [Seconds]")} \nMemory: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB \nCpu: ${percent.toFixed(2)}%`+ "```")
     .addField(`System`, "```"+`CPU: ${os.cpus().map(i => `${i.model}`)[0]} \nArch: ${os.arch()} \nPLatform: ${os.platform()} \nNodejs: ${process.version} \nDiscord.js: v${version}`+"```")
     .setTimestamp()
-    .setFooter(`Requested By ${msg.author.username}`, msg.auhtor.displayAvatarURL)
+    .setFooter(`Requested By ${msg.author.username}`, msg.author.displayAvatarURL)
    msg.channel.send(embed);
     })
 }
