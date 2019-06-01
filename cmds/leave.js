@@ -5,3 +5,14 @@ exports.run = (bot, msg, args) => {
     serverQueue.connection.dispatcher.end()
     vc.leave()
 }
+
+exports.help = {
+    aliases: ["dc"],
+    name: "leave"
+}
+
+exports.conf = {
+    args: false,
+    restricted:false,
+    category: "Music"
+}
