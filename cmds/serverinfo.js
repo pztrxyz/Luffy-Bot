@@ -17,7 +17,7 @@ exports.run = (bot, msg, args) => {
     .addField(`General Information`, "```"+ `ID: ${msg.guild.id} \nVerification Level: ${secure[msg.guild.verificationLevel]} \nCreate At: ${moment(msg.guild.createdTimestamp).format("YYYY-M-D [at] HH:mm:ss")} \nRegion: ${msg.guild.region}` + "```")
     .addField(`Channels`, "```" + `Text: ${msg.guild.channels.filter(ch => ch.type == "text").size} Channels \nVoice ${msg.guild.channels.filter(c => c.type == "voice").size} Channels ` + "```")
     .addField(`Members`, "```" + `Members: ${msg.guild.memberCount} Total \nUsers:${msg.guild.members.filter(m => !m.user.bot).size} \nBots: ${msg.guild.members.filter(mm => mm.user.bot).size} Bots` + "```")
-    .addField(`Roles`, "```" + `Total: ${msg.guild.roles.size}, For List Of Roles, use command \`serverroles\``+ "```")
+    .addField(`Roles`, "```" + `Total: ${msg.guild.roles.size}, For List Of Roles, use command 'serverroles'`+ "```")
     .addField(`Owner`, "```" + `Name: ${msg.guild.owner.user.tag} \nID: ${msg.guild.owner.id}` + "```")
     .setTimestamp()
     .setFooter(`Requested By ${msg.author.username}`, msg.author.displayAvatarURL)
