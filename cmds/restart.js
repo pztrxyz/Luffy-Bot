@@ -11,7 +11,7 @@ exports.help = {
 }
 
 exports.conf = {
-    args: true,
+    args: false,
     restricted: true,
     category: 'Dev'
 }
