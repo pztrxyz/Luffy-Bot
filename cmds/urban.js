@@ -20,7 +20,7 @@ exports.run = async(bot, msg, args) => {
    	};
   message.channel.send(embed)
 }
-//
+
 exports.help = {
     aliases: [],
     name: "urban"
