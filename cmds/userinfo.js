@@ -9,7 +9,7 @@ exports.run = (bot, msg, args) => {
 
     if(!mention) {
         var uembed = new Discord.RichEmbed()
-        .setAuthor("RANDOM")
+        .setColor("RANDOM")
         .setAuthor(`Info Of ${msg.author.tag}`, msg.author.displayAvatarURL)
         .setThumbnail(msg.author.displayAvatarURL)
         .addField(`General Information`, "```"+ `Tag: ${msg.author.tag} \nid: ${msg.author.id}, \ntype: ${type[msg.author.bot]} \ncreatedAt: ${moment(msg.author.createdTimestamp).format("YYYY - M - D [at] HH:mm:s")}` + "```" + `\navatarURL: [CLICK ME](${msg.author.avatarURL}) \nMention: <@${msg.author.id}>`)
