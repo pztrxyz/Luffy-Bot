@@ -32,6 +32,7 @@
     "opusscript": "0.0.6",
     "os": "^0.1.1",
     "simple-youtube-api": "^5.1.1",
+    "sqlite3": "^4.0.8",
     "ytdl-core": "^0.29.2"
   }
 }
