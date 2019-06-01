@@ -1,4 +1,4 @@
-exports.run = (bot, msg, args) => {
+exports.run = async(bot, msg, args) => {
 
     if(!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.channel.send(':x: | You Dont have permission to execute this command')
 
