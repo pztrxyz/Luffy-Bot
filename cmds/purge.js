@@ -7,15 +7,15 @@ exports.run = async(bot, msg, args) => {
     if (amount > 100) {
         let messageLeft = amount
         while (messageLeft > 0 ) {
-            let messages = await message.channel.fetchMessages({ limit: 100 })
-      let cleared = await message.channel.bulkDelete(messages, true)
+            let messages = await msg.channel.fetchMessages({ limit: 100 })
+      let cleared = await msg.channel.bulkDelete(messages, true)
       msg.channel.send(cleared.size + ' WAS DELETED').then(messages => messages.delete(5000))
       await sleep(throttle * 1000)
       messageleft = messageleft - 100
     }
         } else {
-            let messages = await message.channel.fetchMessages({ limit: amount })
-    let cleared = await message.channel.bulkDelete(messages, true)
+            let messages = await msg.channel.fetchMessages({ limit: amount })
+    let cleared = await msg.channel.bulkDelete(messages, true)
     return msg.channel.send(cleared.size + ' WAS DELETED').then(message => message.delete(5000))
         }
         function sleep(ms) {
