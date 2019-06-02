@@ -1,12 +1,10 @@
 const Discord = require('discord.js')
-const porn = require('pornsearch')
+const porn = require('random-puppy')
 
 exports.run = (bot, msg, args) => {
-    const search = new porn(args.join(" "))
-
-    search.gifs().then(gif => {
+    porn('porn-gif').then(url => {
         var embed = new Discord.RichEmbed()
-        .setImage(gif)
+        .setImage(url)
         msg.channel.send(embed)
     })
 }
