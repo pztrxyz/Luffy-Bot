@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const porn = require('pornsearch')
+const Porn = require('pornsearch')
 
 exports.run = (bot, msg, args) => {
     const search = new Porn(args.join(" "))
