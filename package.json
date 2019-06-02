@@ -33,6 +33,7 @@
     "fs": "0.0.1-security",
     "memejs": "^1.0.7",
     "moment": "^2.24.0",
+    "mongoose": "^5.5.12",
     "opusscript": "0.0.6",
     "os": "^0.1.1",
     "pornsearch": "^2.4.3",

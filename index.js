@@ -2,10 +2,9 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const fs = require('fs');
 const config = require('./config.json');
-const queue = new Discord.Collection();
 const bot = new Discord.Client({disableEveryone:  true});
 
-bot.queue = queue;
+bot.afk = new Discord.Collection();
 bot.events = new Discord.Collection();
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -39,6 +38,13 @@ bot.on("message", async(msg) => {
   const config = require('./config.json')
     try {
         if (msg.author.bot) return;
+        if (msg.content.includes(msg.mentions.users.first())) {
+          let mentioned = bot.afk.get(msg.mentions.users.first().id);
+          if (mentioned) msg.channel.send(`**${mentioned.usertag}** is currently afk. Reason: ${mentioned.reason}`);
+      }
+      let afkcheck = bot.afk.get(msg.author.id);
+      if (afkcheck) return [bot.afk.delete(msg.author.id), msg.reply(`you have been removed from the afk list!`).then(msg => msg.delete(5000))];
+  
         if (msg.content.indexOf(config.prefix) !== 0) return;
               const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
               let command = args.shift().toLowerCase();
