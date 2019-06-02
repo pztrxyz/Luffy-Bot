@@ -1,3 +1,3 @@
-module.exports = (bot)=> {
-    console.error();
+module.exports = (bot, error)=> {
+    console.log(error);
 }

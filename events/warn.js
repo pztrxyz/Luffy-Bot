@@ -1,4 +1,3 @@
-module.exports = (bot) => {
-    console.warn();
-    
+module.exports = (bot, warn) => {
+    console.log(warn)    
 }
