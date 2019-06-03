@@ -24,5 +24,5 @@ exports.help = {
 
 exports.conf  = {
     restrited: false,
-    category: "utility"
+    category: "Utility"
 }
