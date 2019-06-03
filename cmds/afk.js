@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 exports.run = (bot, msg, args) => {
     const reason = args.join(" ") ? args.join(" ") : "No Reason Set"
     let afk = bot.afk.get(msg.author.id);
@@ -10,7 +12,8 @@ exports.run = (bot, msg, args) => {
     }
     
     bot.afk.set(msg.author.id, construct);
-    return msg.channel.send(`${msg.author.username} is afk. Reason: ${reason}`);
+    
+    return msg.channel.send(`${msg.author.username} Is Now AFK. Reason: __${reason}__`);
 }
 };
 

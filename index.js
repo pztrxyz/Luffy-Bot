@@ -40,7 +40,8 @@ bot.on("message", async(msg) => {
         if (msg.author.bot) return;
         if (msg.content.includes(msg.mentions.users.first())) {
           let mentioned = bot.afk.get(msg.mentions.users.first().id);
-          if (mentioned) msg.channel.send(`**${mentioned.usertag}** is currently afk. Reason: ${mentioned.reason}`);
+          var afkembed = new Discord.RichEmbed()
+          if (mentioned) msg.channel.send(`**${mentioned.usertag}** Is Currently AFK. Reason: ${mentioned.reason}`);
       }
       let afkcheck = bot.afk.get(msg.author.id);
       if (afkcheck) return [bot.afk.delete(msg.author.id), msg.reply(`you have been removed from the afk list!`).then(msg => msg.delete(5000))];
