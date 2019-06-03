@@ -7,6 +7,9 @@ exports.run = (bot, msg, args) => {
     const core = bot.commands.filter(c => c.conf.category == "Core").map(co => co.help.name);
 
     var embed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .setTimestamp()
+    .setFooter(`Requested By ${msg.author.username}`, msg.author.displayAvatarURL)
     .addField("Utility", `${utility.join(", ")}`)
     .addField("Fun", `${fun.join(", ")}`)
     .addField("NSFW", `${nsfw.join(", ")}`)
