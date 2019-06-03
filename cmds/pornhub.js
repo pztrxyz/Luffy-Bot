@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 
 exports.run = (bot, msg, args) => {
+    if(!msg.channel.nsfw) return;
+    const query = args.join(" ");
+    if(!query) return msg.channel.send(":x: | Please Input An Arguments To Search!");
     if (!msg.channel.nsfw) return;
     const Pornsearch = require('pornsearch').default.search(query);
         Pornsearch.gifs(1)

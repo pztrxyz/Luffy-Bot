@@ -56,9 +56,6 @@ bot.on("message", async(msg) => {
               if (bot.commands.get(command).conf.restricted == true) {
                 if (msg.author.id !== config.owner) return msg.channel.send('This Command For My Owner');
               }
-              if (bot.commands.get(command).conf.args == true) {
-                  if (!args[0]) return msg.channel.send(`Invalid arguments. Use: ${config.prefix + 'help ' + bot.commands.get(command).help.name}`)
-              }
       
               let commandFile = require(`./cmds/${command}.js`);
               commandFile.run(bot, msg, args);

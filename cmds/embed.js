@@ -1,7 +1,8 @@
 const { RichEmbed } = require('discord.js');
 
 exports.run = async(bot, msg, args) => {
-    var color = parseInt(args[0])
+    if(!args) return msg.channel.send(`:x: | Please Input An Arguments To Say`);
+    var color = parseInt(args[0]);
 
     if(!color) {
     var embed = new RichEmbed()

@@ -4,6 +4,7 @@ exports.run = async(bot, msg, args) => {
 
     const throttle = 2
     const amount = parseInt(args[0])
+    if(!amount) return msg.channel.send(":x: | Please Input An Number!");
     if (amount > 100) {
         let messageLeft = amount
         while (messageLeft > 0 ) {

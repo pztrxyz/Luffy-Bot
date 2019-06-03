@@ -2,6 +2,7 @@ const urban = require('relevant-urban');
 const Discord = require('discord.js');
 
 exports.run = async(bot, msg, args) => {
+    if(!args.join(" ")) return (":x: | Please INput An Arguments To Search!")
     let res = await urban(args.join(" ")).catch(e => {
         return msg.channel.send(":x: | Word Not Found")
     })

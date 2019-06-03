@@ -5,7 +5,7 @@ const ytdl = require('ytdl-core');
 const moment = require('moment');
 
 exports.run = async (bot, msg, args) => {
-
+if(!args) return msg.channel.send(`:x: | You Want Me To Play Wut?!`);
 	try{
 		const youtube = new YouTube(GOOGLE_KEY);
 		
