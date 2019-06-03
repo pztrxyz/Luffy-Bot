@@ -4,6 +4,7 @@ const fs = require('fs');
 const config = require('./config.json');
 const bot = new Discord.Client({disableEveryone:  true});
 
+bot.queue = new Discord.Collection();
 bot.afk = new Discord.Collection();
 bot.events = new Discord.Collection();
 bot.commands = new Discord.Collection();
