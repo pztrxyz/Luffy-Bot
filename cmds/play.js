@@ -101,7 +101,6 @@ exports.help = {
 }
 
 exports.conf = {
-  args: true,
   restricted: false,
   category: "Music"
 }

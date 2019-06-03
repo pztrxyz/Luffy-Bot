@@ -10,7 +10,6 @@ exports.help = {
 }
 
 exports.conf = {
-    args: false,
     restricted: true,
     category: 'Dev'
 }

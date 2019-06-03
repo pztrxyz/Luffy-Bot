@@ -23,7 +23,6 @@ exports.help = {
 }
 
 exports.conf = {
-    args: true,
-    restricted: false,
-    category: "Fun"
+ restricted: false,
+ category: "Fun"
 }

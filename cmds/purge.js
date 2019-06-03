@@ -29,7 +29,6 @@ exports.run = async(bot, msg, args) => {
     }
 
     exports.conf = {
-        args: true,
         restricted: false,
         category: "Moderator"
     }

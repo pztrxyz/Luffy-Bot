@@ -31,7 +31,6 @@ exports.help = {
 }
 
 exports.conf = {
-    args: true,
     restricted: true,
     category: "Devs"
 }

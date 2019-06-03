@@ -26,7 +26,6 @@ exports.help = {
 }
 
 exports.conf ={
-    args:  false,
     restricted: false,
     category: "NSFW"
 }
