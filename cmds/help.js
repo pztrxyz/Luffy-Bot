@@ -14,6 +14,7 @@ exports.run = (bot, msg, args) => {
     .addField("Fun", `${fun.join(", ")}`)
     .addField("NSFW", `${nsfw.join(", ")}`)
     .addField("Core", `${core.join(", ")}`)
+    .addField("Music", "For music commands use `helpmusic`");
     msg.channel.send(embed);
 }
 
