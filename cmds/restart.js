@@ -1,6 +1,6 @@
 exports.run = (bot, msg, args) => {
     msg.channel.send("**Restarting...**")
-    bot.destroy().then(() => bot.login(process.env.token));
+    process.exit();
     msg.channel.send("Done");
 }
 
